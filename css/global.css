@@ -470,6 +470,80 @@ a {
     }
 }
 
+/* =========================
+   ENTRADA DA PÁGINA INICIAL
+========================= */
+
+.hero-file,
+.hero-title,
+.hero-description,
+.hero-actions {
+    opacity: 0;
+
+    animation:
+        hero-content-entry 0.9s ease forwards;
+}
+
+.hero-file {
+    animation-delay: 0.15s;
+}
+
+.hero-title {
+    animation-delay: 0.4s;
+}
+
+.hero-description {
+    animation-delay: 0.7s;
+}
+
+.hero-actions {
+    animation-delay: 0.95s;
+}
+
+@keyframes hero-content-entry {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(26px);
+
+        filter:
+            blur(7px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter:
+            blur(0);
+    }
+}
+
+
+/* =========================
+   REVELAÇÃO DURANTE A ROLAGEM
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(55px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
 
 /* =========================
    DESCRIÇÃO E AÇÕES
@@ -706,5 +780,20 @@ a {
     .hero-file-number::before,
     .hero-file-number::after {
         animation: none;
+    }
+
+    .hero-file,
+    .hero-title,
+    .hero-description,
+    .hero-actions {
+        opacity: 1;
+        animation: none;
+    }
+
+    .reveal,
+    .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
