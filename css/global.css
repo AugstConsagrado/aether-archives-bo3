@@ -150,6 +150,8 @@ a {
 ========================= */
 
 .hero {
+    position: relative;
+
     min-height: 100vh;
 
     display: flex;
@@ -210,13 +212,275 @@ a {
         0 0 35px rgba(242, 106, 33, 0.22);
 }
 
+.title-line {
+    display: block;
+}
+
+
+/* =========================
+   FALHA DE SINAL DO TÍTULO
+========================= */
+
+.animated-letter,
+.hero-file-number {
+    position: relative;
+
+    display: inline-block;
+    isolation: isolate;
+
+    color: var(--primary);
+
+    text-shadow:
+        0 0 8px rgba(242, 106, 33, 0.55),
+        0 0 22px rgba(242, 106, 33, 0.25);
+
+    animation:
+        signal-glitch-main 14s steps(1, end) infinite;
+}
+
+.animated-letter::before,
+.animated-letter::after,
+.hero-file-number::before,
+.hero-file-number::after {
+    content: attr(data-text);
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+    opacity: 0;
+}
+
+.animated-letter::before,
+.hero-file-number::before {
+    color: var(--primary-light);
+
+    text-shadow:
+        -3px 0 rgba(255, 70, 30, 0.75);
+
+    animation:
+        signal-glitch-left 14s steps(1, end) infinite;
+}
+
+.animated-letter::after,
+.hero-file-number::after {
+    color: var(--aether-blue);
+
+    text-shadow:
+        3px 0 rgba(77, 181, 217, 0.8);
+
+    animation:
+        signal-glitch-right 14s steps(1, end) infinite;
+}
+
+/* Faz cada elemento apresentar a falha em um momento diferente. */
+
+.animated-letter-second,
+.animated-letter-second::before,
+.animated-letter-second::after {
+    animation-delay: -4.6s;
+}
+
+.hero-file-number,
+.hero-file-number::before,
+.hero-file-number::after {
+    animation-delay: -9.2s;
+}
+
+
+/* Movimento principal da letra. */
+
+@keyframes signal-glitch-main {
+    0%,
+    72%,
+    81%,
+    100% {
+        opacity: 1;
+        transform: translate(0);
+        filter: none;
+    }
+
+    73% {
+        opacity: 0.4;
+
+        transform:
+            translateX(-2px)
+            skewX(-5deg);
+
+        filter:
+            contrast(1.8)
+            brightness(1.2);
+    }
+
+    74% {
+        opacity: 1;
+        transform: translateX(3px);
+    }
+
+    75% {
+        opacity: 0.2;
+        transform: translateX(-1px);
+    }
+
+    76% {
+        opacity: 1;
+
+        transform:
+            translateX(2px)
+            skewX(4deg);
+
+        filter:
+            contrast(1.5)
+            brightness(1.5);
+    }
+
+    77% {
+        opacity: 0.55;
+        transform: translateX(-3px);
+    }
+
+    78% {
+        opacity: 1;
+        transform: translateX(2px);
+    }
+
+    79% {
+        opacity: 0.65;
+        transform: translateX(-1px);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translate(0);
+        filter: none;
+    }
+}
+
+
+/* Cópia deslocada para a esquerda. */
+
+@keyframes signal-glitch-left {
+    0%,
+    72%,
+    81%,
+    100% {
+        opacity: 0;
+
+        transform: translate(0);
+
+        clip-path:
+            inset(0 0 100% 0);
+    }
+
+    73% {
+        opacity: 0.85;
+
+        transform: translateX(-4px);
+
+        clip-path:
+            inset(10% 0 58% 0);
+    }
+
+    74% {
+        opacity: 0.3;
+
+        transform: translateX(2px);
+
+        clip-path:
+            inset(68% 0 8% 0);
+    }
+
+    75% {
+        opacity: 0.65;
+
+        transform: translateX(3px);
+
+        clip-path:
+            inset(55% 0 18% 0);
+    }
+
+    77% {
+        opacity: 0.8;
+
+        transform: translateX(-2px);
+
+        clip-path:
+            inset(72% 0 5% 0);
+    }
+
+    79% {
+        opacity: 0;
+    }
+}
+
+
+/* Cópia deslocada para a direita. */
+
+@keyframes signal-glitch-right {
+    0%,
+    72%,
+    81%,
+    100% {
+        opacity: 0;
+
+        transform: translate(0);
+
+        clip-path:
+            inset(100% 0 0 0);
+    }
+
+    73% {
+        opacity: 0.35;
+
+        transform: translateX(-2px);
+
+        clip-path:
+            inset(15% 0 64% 0);
+    }
+
+    74% {
+        opacity: 0.8;
+
+        transform: translateX(4px);
+
+        clip-path:
+            inset(40% 0 35% 0);
+    }
+
+    76% {
+        opacity: 0.45;
+
+        transform: translateX(-3px);
+
+        clip-path:
+            inset(5% 0 76% 0);
+    }
+
+    78% {
+        opacity: 0.85;
+
+        transform: translateX(2px);
+
+        clip-path:
+            inset(63% 0 12% 0);
+    }
+
+    80% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   DESCRIÇÃO E AÇÕES
+========================= */
+
 .hero-description {
     max-width: 680px;
 
     margin-top: 2rem;
 
     color: var(--text-muted);
-
     font-size: 1.1rem;
 
     text-shadow:
@@ -422,5 +686,25 @@ a {
     .section {
         width: min(100% - 2rem, var(--container-width));
         min-height: 55vh;
+    }
+}
+
+
+/* =========================
+   ACESSIBILIDADE
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .animated-letter,
+    .animated-letter::before,
+    .animated-letter::after,
+    .hero-file-number,
+    .hero-file-number::before,
+    .hero-file-number::after {
+        animation: none;
     }
 }
