@@ -30,11 +30,14 @@
 * {
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
+    /* Inclui bordas e espaçamentos no tamanho do elemento */
 }
 
 html {
     scroll-behavior: smooth;
+    /* Suaviza a navegação entre as seções */
 }
 
 body {
@@ -71,6 +74,8 @@ a {
 
 .header {
     position: fixed;
+    /* Mantém o menu visível durante a rolagem */
+
     top: 0;
     left: 0;
     z-index: 1000;
@@ -88,6 +93,7 @@ a {
     border-bottom: 1px solid var(--border);
 
     backdrop-filter: blur(12px);
+    /* Desfoca o conteúdo atrás do menu */
 }
 
 .logo {
@@ -175,6 +181,8 @@ a {
         url("../assets/images/hero-home-bo3.png");
 
     background-size: cover;
+    /* Faz a imagem preencher toda a área */
+
     background-position: 65% center;
     background-repeat: no-repeat;
 }
@@ -202,6 +210,8 @@ a {
     max-width: 760px;
 
     font-size: clamp(3rem, 7vw, 6.5rem);
+    /* Adapta o tamanho do título à tela */
+
     line-height: 0.95;
 
     letter-spacing: -0.22rem;
@@ -214,6 +224,7 @@ a {
 
 .title-line {
     display: block;
+    /* Coloca Aether e Archives em linhas separadas */
 }
 
 
@@ -237,6 +248,8 @@ a {
     animation:
         signal-glitch-main 14s steps(1, end) infinite;
 }
+
+/* Cria cópias sobrepostas para simular interferência. */
 
 .animated-letter::before,
 .animated-letter::after,
@@ -272,8 +285,6 @@ a {
     animation:
         signal-glitch-right 14s steps(1, end) infinite;
 }
-
-/* Faz cada elemento apresentar a falha em um momento diferente. */
 
 .animated-letter-second,
 .animated-letter-second::before,
@@ -357,7 +368,7 @@ a {
 }
 
 
-/* Cópia deslocada para a esquerda. */
+/* Interferência deslocada para a esquerda. */
 
 @keyframes signal-glitch-left {
     0%,
@@ -365,7 +376,6 @@ a {
     81%,
     100% {
         opacity: 0;
-
         transform: translate(0);
 
         clip-path:
@@ -374,7 +384,6 @@ a {
 
     73% {
         opacity: 0.85;
-
         transform: translateX(-4px);
 
         clip-path:
@@ -383,7 +392,6 @@ a {
 
     74% {
         opacity: 0.3;
-
         transform: translateX(2px);
 
         clip-path:
@@ -392,7 +400,6 @@ a {
 
     75% {
         opacity: 0.65;
-
         transform: translateX(3px);
 
         clip-path:
@@ -401,7 +408,6 @@ a {
 
     77% {
         opacity: 0.8;
-
         transform: translateX(-2px);
 
         clip-path:
@@ -414,7 +420,7 @@ a {
 }
 
 
-/* Cópia deslocada para a direita. */
+/* Interferência deslocada para a direita. */
 
 @keyframes signal-glitch-right {
     0%,
@@ -422,7 +428,6 @@ a {
     81%,
     100% {
         opacity: 0;
-
         transform: translate(0);
 
         clip-path:
@@ -431,7 +436,6 @@ a {
 
     73% {
         opacity: 0.35;
-
         transform: translateX(-2px);
 
         clip-path:
@@ -440,7 +444,6 @@ a {
 
     74% {
         opacity: 0.8;
-
         transform: translateX(4px);
 
         clip-path:
@@ -449,7 +452,6 @@ a {
 
     76% {
         opacity: 0.45;
-
         transform: translateX(-3px);
 
         clip-path:
@@ -458,7 +460,6 @@ a {
 
     78% {
         opacity: 0.85;
-
         transform: translateX(2px);
 
         clip-path:
@@ -469,6 +470,7 @@ a {
         opacity: 0;
     }
 }
+
 
 /* =========================
    ENTRADA DA PÁGINA INICIAL
@@ -504,46 +506,18 @@ a {
     from {
         opacity: 0;
 
-        transform:
-            translateY(26px);
-
-        filter:
-            blur(7px);
+        transform: translateY(26px);
+        filter: blur(7px);
     }
 
     to {
         opacity: 1;
 
-        transform:
-            translateY(0);
-
-        filter:
-            blur(0);
+        transform: translateY(0);
+        filter: blur(0);
     }
 }
 
-
-/* =========================
-   REVELAÇÃO DURANTE A ROLAGEM
-========================= */
-
-.reveal {
-    opacity: 0;
-
-    transform:
-        translateY(55px);
-
-    transition:
-        opacity 0.9s ease,
-        transform 0.9s ease;
-}
-
-.reveal.is-visible {
-    opacity: 1;
-
-    transform:
-        translateY(0);
-}
 
 /* =========================
    DESCRIÇÃO E AÇÕES
@@ -598,6 +572,7 @@ a {
 
 .button:hover {
     transform: translateY(-4px);
+    /* Levanta o botão ao passar o mouse */
 }
 
 .button-primary {
@@ -669,6 +644,398 @@ a {
     font-size: 1.05rem;
 }
 
+
+/* =========================
+   REVELAÇÃO NA ROLAGEM
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(55px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+    /* Suaviza a entrada das seções */
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   CATÁLOGO DE MAPAS
+========================= */
+
+.maps-section {
+    width: min(100% - 3rem, var(--container-width));
+}
+
+.section-heading {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 3rem;
+
+    margin-bottom: 3.5rem;
+}
+
+.section-introduction {
+    max-width: 590px;
+
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.map-grid {
+    display: grid;
+    /* Ativa o sistema de grade */
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    /* Cria colunas responsivas automaticamente */
+
+    gap: 1.5rem;
+
+    width: 100%;
+}
+
+.map-card {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 490px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.03),
+            transparent
+        ),
+        var(--surface);
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.map-card:hover {
+    transform: translateY(-8px);
+    /* Move o cartão para cima */
+
+    border-color:
+        rgba(242, 106, 33, 0.6);
+
+    box-shadow:
+        0 22px 55px rgba(0, 0, 0, 0.42);
+}
+
+.map-card-visual {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 190px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 1.2rem;
+
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            var(--card-glow),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            var(--card-color-dark),
+            #060708
+        );
+}
+
+.map-card-visual::before {
+    content: attr(data-code);
+
+    position: absolute;
+    right: -0.4rem;
+    bottom: -2.2rem;
+
+    color: rgba(255, 255, 255, 0.07);
+
+    font-size: 7rem;
+    font-weight: 900;
+    letter-spacing: -0.5rem;
+    line-height: 1;
+}
+
+.map-card-visual::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 4px,
+            rgba(255, 255, 255, 0.025) 5px
+        );
+
+    pointer-events: none;
+}
+
+.map-card-file {
+    position: relative;
+    z-index: 1;
+
+    padding: 0.45rem 0.65rem;
+
+    background: rgba(5, 6, 8, 0.7);
+    border: 1px solid var(--border);
+
+    color: var(--card-color);
+
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.13rem;
+    text-transform: uppercase;
+
+    backdrop-filter: blur(7px);
+}
+
+.map-card-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.5rem;
+}
+
+.map-card-location {
+    margin-bottom: 0.35rem;
+
+    color: var(--card-color);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+.map-card h3 {
+    margin-bottom: 1rem;
+
+    color: var(--text);
+
+    font-size: 1.65rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.map-card-description {
+    margin-bottom: 1.4rem;
+
+    color: var(--text-muted);
+    font-size: 0.94rem;
+}
+
+.map-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+
+    margin-top: auto;
+    margin-bottom: 1.4rem;
+
+    list-style: none;
+}
+
+.map-card-tags li {
+    padding: 0.35rem 0.55rem;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border: 1px solid var(--border);
+
+    color: #c5c8cc;
+
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.map-card-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 1rem;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-muted);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+.map-card-status::after {
+    content: "🔒";
+
+    filter: grayscale(1);
+    opacity: 0.6;
+}
+
+
+/* =========================
+   CORES DOS MAPAS
+========================= */
+
+.map-card-shadows {
+    --card-color: #b988e2;
+    --card-color-dark: #21142f;
+    --card-glow: rgba(185, 136, 226, 0.32);
+}
+
+.map-card-giant {
+    --card-color: #e08b4a;
+    --card-color-dark: #2b1910;
+    --card-glow: rgba(224, 139, 74, 0.3);
+}
+
+.map-card-eisendrache {
+    --card-color: #79c8e8;
+    --card-color-dark: #102432;
+    --card-glow: rgba(121, 200, 232, 0.32);
+}
+
+.map-card-zetsubou {
+    --card-color: #79a96a;
+    --card-color-dark: #142316;
+    --card-glow: rgba(121, 169, 106, 0.28);
+}
+
+.map-card-gorod {
+    --card-color: #e05a3e;
+    --card-color-dark: #30100c;
+    --card-glow: rgba(224, 90, 62, 0.34);
+}
+
+.map-card-revelations {
+    --card-color: #8c90ff;
+    --card-color-dark: #161936;
+    --card-glow: rgba(140, 144, 255, 0.34);
+}
+
+/* =========================
+   IMAGENS DOS MAPAS
+========================= */
+
+.map-card-shadows .map-card-visual {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 6, 8, 0.08) 0%,
+            rgba(5, 6, 8, 0.30) 55%,
+            rgba(5, 6, 8, 0.92) 100%
+        ),
+        url("../assets/images/maps/shadows-of-evil-canal.webp");
+
+    background-size: cover; /* Faz a imagem preencher o cartão */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.map-card-giant .map-card-visual {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 6, 8, 0.08) 0%,
+            rgba(5, 6, 8, 0.28) 55%,
+            rgba(5, 6, 8, 0.92) 100%
+        ),
+        url("../assets/images/maps/the-giant.jpg");
+
+    background-size: cover; /* Preenche toda a área do cartão */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+
+.map-card-eisendrache .map-card-visual {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 6, 8, 0.08) 0%,
+            rgba(5, 6, 8, 0.28) 55%,
+            rgba(5, 6, 8, 0.92) 100%
+        ),
+        url("../assets/images/maps/der-eisendrache.jpg");
+
+    background-size: cover; /* Faz a imagem preencher toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+
+.map-card-zetsubou .map-card-visual {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 6, 8, 0.06) 0%,
+            rgba(5, 6, 8, 0.25) 52%,
+            rgba(5, 6, 8, 0.92) 100%
+        ),
+        url("../assets/images/maps/zetsubou_no_shima.jpg");
+
+    background-size: cover; /* Preenche toda a área do cartão */
+    background-position: center 42%; /* Ajusta o enquadramento vertical */
+    background-repeat: no-repeat;
+}
+
+.map-card-gorod .map-card-visual {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 6, 8, 0.06) 0%,
+            rgba(5, 6, 8, 0.24) 52%,
+            rgba(5, 6, 8, 0.92) 100%
+        ),
+        url("../assets/images/maps/Gorod_krovi.jpg");
+
+    background-size: cover; /* Faz a imagem preencher o cartão */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+
+.map-card-revelations .map-card-visual {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 6, 8, 0.04) 0%,
+            rgba(5, 6, 8, 0.22) 52%,
+            rgba(5, 6, 8, 0.92) 100%
+        ),
+        url("../assets/images/maps/revelations.jpg");
+
+    background-size: cover; /* Faz a imagem preencher o cartão */
+    background-position: center 45%; /* Ajusta o enquadramento vertical */
+    background-repeat: no-repeat;
+}
 
 /* =========================
    RODAPÉ
@@ -760,6 +1127,23 @@ a {
     .section {
         width: min(100% - 2rem, var(--container-width));
         min-height: 55vh;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+
+        margin-bottom: 2.4rem;
+    }
+
+    .map-grid {
+        grid-template-columns: 1fr;
+        /* Usa apenas uma coluna no celular */
+    }
+
+    .map-card {
+        min-height: auto;
     }
 }
 
