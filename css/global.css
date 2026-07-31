@@ -30,14 +30,11 @@
 * {
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-    /* Inclui bordas e espaçamentos no tamanho do elemento */
 }
 
 html {
     scroll-behavior: smooth;
-    /* Suaviza a navegação entre as seções */
 }
 
 body {
@@ -74,7 +71,6 @@ a {
 
 .header {
     position: fixed;
-    /* Mantém o menu visível durante a rolagem */
 
     top: 0;
     left: 0;
@@ -93,7 +89,6 @@ a {
     border-bottom: 1px solid var(--border);
 
     backdrop-filter: blur(12px);
-    /* Desfoca o conteúdo atrás do menu */
 }
 
 .logo {
@@ -181,8 +176,6 @@ a {
         url("../assets/images/hero-home-bo3.png");
 
     background-size: cover;
-    /* Faz a imagem preencher toda a área */
-
     background-position: 65% center;
     background-repeat: no-repeat;
 }
@@ -210,8 +203,6 @@ a {
     max-width: 760px;
 
     font-size: clamp(3rem, 7vw, 6.5rem);
-    /* Adapta o tamanho do título à tela */
-
     line-height: 0.95;
 
     letter-spacing: -0.22rem;
@@ -224,7 +215,6 @@ a {
 
 .title-line {
     display: block;
-    /* Coloca Aether e Archives em linhas separadas */
 }
 
 
@@ -248,8 +238,6 @@ a {
     animation:
         signal-glitch-main 14s steps(1, end) infinite;
 }
-
-/* Cria cópias sobrepostas para simular interferência. */
 
 .animated-letter::before,
 .animated-letter::after,
@@ -297,9 +285,6 @@ a {
 .hero-file-number::after {
     animation-delay: -9.2s;
 }
-
-
-/* Movimento principal da letra. */
 
 @keyframes signal-glitch-main {
     0%,
@@ -367,9 +352,6 @@ a {
     }
 }
 
-
-/* Interferência deslocada para a esquerda. */
-
 @keyframes signal-glitch-left {
     0%,
     72%,
@@ -418,9 +400,6 @@ a {
         opacity: 0;
     }
 }
-
-
-/* Interferência deslocada para a direita. */
 
 @keyframes signal-glitch-right {
     0%,
@@ -572,7 +551,6 @@ a {
 
 .button:hover {
     transform: translateY(-4px);
-    /* Levanta o botão ao passar o mouse */
 }
 
 .button-primary {
@@ -657,7 +635,6 @@ a {
     transition:
         opacity 0.9s ease,
         transform 0.9s ease;
-    /* Suaviza a entrada das seções */
 }
 
 .reveal.is-visible {
@@ -694,11 +671,9 @@ a {
 
 .map-grid {
     display: grid;
-    /* Ativa o sistema de grade */
 
     grid-template-columns:
         repeat(auto-fit, minmax(280px, 1fr));
-    /* Cria colunas responsivas automaticamente */
 
     gap: 1.5rem;
 
@@ -732,13 +707,21 @@ a {
 
 .map-card:hover {
     transform: translateY(-8px);
-    /* Move o cartão para cima */
 
     border-color:
         rgba(242, 106, 33, 0.6);
 
     box-shadow:
         0 22px 55px rgba(0, 0, 0, 0.42);
+}
+
+a.map-card {
+    cursor: pointer;
+}
+
+a.map-card:focus-visible {
+    outline: 2px solid var(--card-color);
+    outline-offset: 4px;
 }
 
 .map-card-visual {
@@ -902,6 +885,19 @@ a {
     opacity: 0.6;
 }
 
+.map-card-status-ready {
+    color: var(--card-color);
+}
+
+.map-card-status-ready::after {
+    content: "→";
+
+    color: var(--card-color);
+
+    filter: none;
+    opacity: 1;
+}
+
 
 /* =========================
    CORES DOS MAPAS
@@ -943,6 +939,7 @@ a {
     --card-glow: rgba(140, 144, 255, 0.34);
 }
 
+
 /* =========================
    IMAGENS DOS MAPAS
 ========================= */
@@ -957,7 +954,7 @@ a {
         ),
         url("../assets/images/maps/shadows-of-evil-canal.webp");
 
-    background-size: cover; /* Faz a imagem preencher o cartão */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -972,8 +969,8 @@ a {
         ),
         url("../assets/images/maps/the-giant.jpg");
 
-    background-size: cover; /* Preenche toda a área do cartão */
-    background-position: center; /* Centraliza a imagem */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -987,8 +984,8 @@ a {
         ),
         url("../assets/images/maps/der-eisendrache.jpg");
 
-    background-size: cover; /* Faz a imagem preencher toda a área */
-    background-position: center; /* Centraliza a imagem */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -1002,8 +999,8 @@ a {
         ),
         url("../assets/images/maps/zetsubou_no_shima.jpg");
 
-    background-size: cover; /* Preenche toda a área do cartão */
-    background-position: center 42%; /* Ajusta o enquadramento vertical */
+    background-size: cover;
+    background-position: center 42%;
     background-repeat: no-repeat;
 }
 
@@ -1015,10 +1012,10 @@ a {
             rgba(5, 6, 8, 0.24) 52%,
             rgba(5, 6, 8, 0.92) 100%
         ),
-        url("../assets/images/maps/Gorod_krovi.jpg");
+        url("../assets/images/maps/gorod_krovi.jpg");
 
-    background-size: cover; /* Faz a imagem preencher o cartão */
-    background-position: center; /* Centraliza a imagem */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -1032,10 +1029,11 @@ a {
         ),
         url("../assets/images/maps/revelations.jpg");
 
-    background-size: cover; /* Faz a imagem preencher o cartão */
-    background-position: center 45%; /* Ajusta o enquadramento vertical */
+    background-size: cover;
+    background-position: center 45%;
     background-repeat: no-repeat;
 }
+
 
 /* =========================
    RODAPÉ
@@ -1139,7 +1137,6 @@ a {
 
     .map-grid {
         grid-template-columns: 1fr;
-        /* Usa apenas uma coluna no celular */
     }
 
     .map-card {

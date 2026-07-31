@@ -1,0 +1,404 @@
+{
+    "shadows-of-evil": {
+        "id": "shadows-of-evil",
+        "file": "Geheimakte 01",
+        "title": "Shadows of Evil",
+        "location": "Morg City — Estados Unidos, década de 1940",
+        "release": "6 de novembro de 2015",
+        "game": "Call of Duty: Black Ops III",
+        "mode": "Zombies cooperativo",
+        "heroImage": "assets/images/maps/shadows-of-evil-canal.webp",
+
+        "theme": {
+            "primary": "#b988e2",
+            "primaryLight": "#dcb7ff",
+            "primaryDark": "#281536",
+            "background": "#08050d",
+            "surface": "#15101c",
+            "glow": "rgba(185, 136, 226, 0.32)"
+        },
+
+        "introduction": "Em uma cidade inspirada no cinema noir dos anos 1940, quatro pessoas marcadas por crimes e segredos são manipuladas por uma entidade conhecida como Shadowman. O que começa como uma tentativa de redenção se transforma em um ritual capaz de colocar toda uma dimensão em perigo.",
+
+        "overview": [
+            {
+                "label": "Local",
+                "value": "Morg City"
+            },
+            {
+                "label": "Período",
+                "value": "Década de 1940"
+            },
+            {
+                "label": "Equipe jogável",
+                "value": "Nero, Jessica, Jack e Floyd"
+            },
+            {
+                "label": "Antagonista principal",
+                "value": "Shadowman"
+            },
+            {
+                "label": "Arma especial",
+                "value": "Apothicon Servant"
+            },
+            {
+                "label": "Missão principal",
+                "value": "Apocalypse Averted"
+            },
+            {
+                "label": "Conclusão completa",
+                "value": "Exige quatro jogadores"
+            },
+            {
+                "label": "Estética",
+                "value": "Noir, horror cósmico e jazz"
+            }
+        ],
+
+        "story": [
+            "Morg City aparenta ser uma grande cidade norte-americana da década de 1940, dividida entre a vida noturna, o crime organizado, os espetáculos e a corrupção. Por trás das luzes, porém, existe uma rede de símbolos, rituais e construções ligadas aos Keepers e aos Apothicons.",
+            "Nero Blackstone, Jessica Rose, Jack Vincent e Floyd Campbell acordam após terem cometido crimes motivados por desespero, ambição ou autopreservação. Cada personagem recebe orientações de uma figura misteriosa conhecida como Shadowman.",
+            "O Shadowman convence o grupo de que os rituais espalhados por Morg City poderão libertá-los de seus pecados. Para completar cada ritual, os personagens utilizam objetos diretamente relacionados aos crimes que cometeram.",
+            "Ao realizarem os quatro rituais, o grupo produz Gateworms e abre o caminho para o Sacred Place, área subterrânea onde o Pack-a-Punch é ativado. Nesse momento, fica evidente que o Shadowman não pretendia salvá-los: os rituais permitiram que ele ampliasse a influência dos Apothicons sobre a dimensão.",
+            "Com a ajuda dos Keepers, o grupo tenta reverter o desastre, obtém as espadas Apothicon, liberta os espíritos presos nos locais dos rituais e enfrenta o Shadowman.",
+            "Depois que o Shadowman é aprisionado na Summoning Key, Edward Richtofen surge inesperadamente, toma o artefato e abandona Morg City. A partir desse momento, a Summoning Key passa a exercer uma função central na jornada da equipe Primis em Black Ops III."
+        ],
+
+        "development": [
+            "A Treyarch apresentou Shadows of Evil como uma experiência de Zombies construída para oferecer uma narrativa mais profunda, um cenário maior e uma identidade visual diferente dos tradicionais campos de batalha da série.",
+            "O mapa utiliza quatro arquétipos diretamente ligados ao cinema noir: o mágico, a femme fatale, o policial e o boxeador. Os personagens possuem voz e aparência inspiradas em seus respectivos atores.",
+            "Jason Blundell explicou posteriormente que Shadows of Evil foi uma tentativa de desafiar expectativas relacionadas ao período histórico, ao tom, à escala e à variedade do ambiente.",
+            "A equipe não substituiu permanentemente Richtofen, Dempsey, Takeo e Nikolai. O novo grupo permitiu contar uma história paralela em Morg City enquanto a equipe Primis continuava sua própria jornada em The Giant e nos mapas seguintes.",
+            "O uso de um elenco diferente também permitiu que a Treyarch explorasse personagens moralmente duvidosos, que não começam como soldados ou heróis. Todos os protagonistas de Morg City são apresentados como pessoas comuns envolvidas em crimes e decisões egoístas.",
+            "Não foi encontrada confirmação oficial de que os quatro protagonistas tenham sido baseados em figuras históricas específicas. A documentação oficial os apresenta principalmente como arquétipos noir interpretados com as vozes e aparências dos atores."
+        ],
+
+        "characters": [
+            {
+                "name": "Nero Blackstone",
+                "archetype": "O mágico",
+                "actor": "Jeff Goldblum",
+                "role": "Ilusionista e proprietário de uma oficina de espetáculos",
+                "personality": "Excêntrico, teatral, nervoso e obcecado por recuperar o prestígio perdido.",
+                "crime": "Nero enfrenta dificuldades financeiras e mata sua esposa para obter dinheiro relacionado ao seguro e escapar de suas dívidas.",
+                "ritualItem": "Golden Fountain Pen",
+                "ritualLocation": "Nero's Landing",
+                "inspiration": "O personagem utiliza o arquétipo do mágico decadente e possui a voz e a aparência de Jeff Goldblum. Não existe confirmação oficial de que seja inspirado em um mágico real específico."
+            },
+            {
+                "name": "Jessica Rose",
+                "archetype": "A femme fatale",
+                "actor": "Heather Graham",
+                "role": "Dançarina e aspirante a atriz",
+                "personality": "Ambiciosa, persuasiva e determinada a alcançar fama, mesmo quando precisa manipular outras pessoas.",
+                "crime": "Jessica mata um produtor de cinema que possuía material comprometedor e utilizava isso para controlá-la.",
+                "ritualItem": "Hair Piece",
+                "ritualLocation": "Black Lace Burlesque",
+                "inspiration": "A personagem representa a femme fatale dos filmes noir e possui a aparência de Heather Graham. Não há confirmação oficial de uma pessoa histórica específica como inspiração."
+            },
+            {
+                "name": "Jack Vincent",
+                "archetype": "O policial",
+                "actor": "Neal McDonough",
+                "role": "Detetive corrupto de Morg City",
+                "personality": "Agressivo, desconfiado, autoritário e acostumado a utilizar sua posição para benefício próprio.",
+                "crime": "Vincent trabalha com criminosos e mata seu parceiro quando percebe que suas atividades ilegais poderiam ser descobertas.",
+                "ritualItem": "Detective's Badge",
+                "ritualLocation": "Ruby Rabbit",
+                "inspiration": "O personagem segue o arquétipo do policial corrupto presente em histórias noir e utiliza a voz e a aparência de Neal McDonough."
+            },
+            {
+                "name": "Floyd Campbell",
+                "archetype": "O boxeador",
+                "actor": "Ron Perlman",
+                "role": "Lutador em busca de uma oportunidade pelo título",
+                "personality": "Brutal, competitivo e frustrado com a possibilidade de perder sua carreira.",
+                "crime": "Floyd utiliza um objeto escondido em sua luva durante uma luta, provocando a morte de seu adversário para tentar garantir sua ascensão no boxe.",
+                "ritualItem": "Championship Belt",
+                "ritualLocation": "Waterfront Boxing Gym",
+                "inspiration": "O personagem utiliza o arquétipo do boxeador envolvido em lutas manipuladas e possui a aparência de Ron Perlman. Não existe confirmação oficial de que represente um atleta real."
+            },
+            {
+                "name": "Shadowman",
+                "archetype": "O manipulador",
+                "actor": "Robert Picardo",
+                "role": "Entidade que orienta e engana os protagonistas",
+                "personality": "Calmo, persuasivo e aparentemente prestativo, mas responsável por manipular o grupo desde o início.",
+                "crime": "Não se aplica. O Shadowman é associado aos Apothicons e pretende utilizar os rituais para ampliar a influência dessas criaturas.",
+                "ritualItem": "Summoning Key",
+                "ritualLocation": "Sacred Place",
+                "inspiration": "Representa a figura do guia enganador e do negociador sobrenatural. É interpretado por Robert Picardo."
+            }
+        ],
+
+        "mechanics": [
+            {
+                "title": "Beast Mode",
+                "description": "Transformação temporária que permite usar tentáculos, eletricidade, agarrar pontos elevados, quebrar caixas, abrir passagens e ativar mecanismos que não podem ser acessados na forma humana."
+            },
+            {
+                "title": "Rituais",
+                "description": "Quatro rituais relacionados aos crimes dos personagens. Cada ritual exige a Summoning Key, um objeto específico e a sobrevivência durante a manifestação dos Keepers."
+            },
+            {
+                "title": "Gateworms",
+                "description": "Criaturas obtidas ao finalizar os rituais. As quatro Gateworms devem ser colocadas nos altares do Sacred Place para liberar o Pack-a-Punch."
+            },
+            {
+                "title": "Bonde de Morg City",
+                "description": "O bonde conecta os distritos de Footlight, Waterfront e Canals. Além de transportar os jogadores, revela símbolos usados na obtenção da Apothicon Sword."
+            },
+            {
+                "title": "Apothicon Sword",
+                "description": "Arma especial obtida ao identificar símbolos no trajeto do bonde, liberar um ovo Apothicon e alimentá-lo com almas em quatro estátuas espalhadas pelo mapa."
+            },
+            {
+                "title": "Apothicon Servant",
+                "description": "Wonder Weapon construída com partes obtidas de Margwas, Parasites, Meatballs e pods. Seus disparos criam uma singularidade que atrai e elimina inimigos próximos."
+            },
+            {
+                "title": "Fumigator e pods",
+                "description": "O Fumigator permite abrir pods espalhados por Morg City. Os pods mudam de cor com o tempo e podem oferecer recompensas, inimigos ou componentes especiais."
+            },
+            {
+                "title": "Civil Protector",
+                "description": "Aliado robótico ativado após encontrar três fusíveis nos distritos e instalá-los na caixa localizada na área subterrânea."
+            },
+            {
+                "title": "Margwa",
+                "description": "Inimigo especial de três cabeças. Para derrotá-lo, o jogador deve atacar suas bocas quando elas se abrem."
+            }
+        ],
+
+        "soundtrack": [
+            {
+                "title": "Snakeskin Boots",
+                "artist": "Jack Wall",
+                "type": "Tema e música secreta",
+                "description": "Composição de jazz criada para combinar com os clubes, espetáculos e a atmosfera noir de Morg City. A música integra oficialmente a trilha sonora de Black Ops III.",
+                "activation": "Interaja com três pequenos rádios ou caixas de som encontrados no Boxing Gym, na estação do bonde de Footlight e no Ruby Rabbit. Uma combinação diferente de interações pode reproduzir a versão instrumental."
+            },
+            {
+                "title": "Cold Hard Cash",
+                "artist": "Jack Wall com participação de Antonia Bennett",
+                "type": "Música secreta",
+                "description": "Canção de jazz vocal ligada ao palco do Black Lace Burlesque. O estilo reforça a identidade de espetáculo, dinheiro, crime e decadência da cidade.",
+                "activation": "Encontre o suporte do microfone na oficina de Nero, o cabo no Canal District e o microfone na área subterrânea próxima ao Widows Wine. Depois, interaja com o microfone montado no palco do Black Lace Burlesque."
+            },
+            {
+                "title": "Trilha ambiente",
+                "artist": "Equipe de áudio da Treyarch",
+                "type": "Música dinâmica",
+                "description": "A ambientação combina jazz, ruídos urbanos, sons de clubes, efeitos sobrenaturais e temas de horror. A trilha alterna a elegância dos anos 1940 com sons associados aos Keepers e Apothicons.",
+                "activation": "Executada automaticamente durante rodadas, rituais, aparições de inimigos especiais e momentos da missão."
+            }
+        ],
+
+        "connections": [
+            {
+                "map": "Mob of the Dead",
+                "description": "Morg City possui referências diretas a Alcatraz e aos personagens de Mob of the Dead. Um dos segredos permite encontrar um ticket de lavanderia pertencente a Sal DeLuca. Os dois mapas também compartilham temas como culpa, punição, ciclos e personagens presos pelas consequências de seus crimes."
+            },
+            {
+                "map": "Origins",
+                "description": "A presença dos Keepers, dos símbolos antigos e de Edward Richtofen liga Morg City à narrativa iniciada em Origins. O Richtofen que aparece no final pertence à equipe Primis."
+            },
+            {
+                "map": "The Giant",
+                "description": "Richtofen aparece em The Giant carregando a Summoning Key tomada no encerramento de Shadows of Evil, estabelecendo uma ligação narrativa direta entre os mapas."
+            },
+            {
+                "map": "Der Eisendrache",
+                "description": "A Summoning Key torna-se uma ferramenta essencial no plano de Richtofen e é utilizada durante a jornada de Primis para armazenar almas."
+            },
+            {
+                "map": "Zetsubou No Shima",
+                "description": "A missão de Primis continua utilizando a Summoning Key, enquanto a narrativa desenvolve as consequências do plano iniciado por Richtofen."
+            },
+            {
+                "map": "Gorod Krovi",
+                "description": "O artefato permanece central na coleta das almas das versões alternativas dos personagens."
+            },
+            {
+                "map": "Revelations",
+                "description": "O conflito entre Keepers e Apothicons, apresentado visualmente em Morg City, torna-se o centro da narrativa. O Shadowman e a Summoning Key retornam como elementos fundamentais."
+            }
+        ],
+
+        "secrets": [
+            {
+                "title": "Ticket de lavanderia de Sal DeLuca",
+                "status": "Confirmado no jogo",
+                "description": "Ao lançar uma granada contra a roupa localizada na lavanderia próxima de Easy Street, o jogador pode obter um ticket pertencente a Sal DeLuca, personagem de Mob of the Dead, e receber 500 pontos."
+            },
+            {
+                "title": "Avanço secreto de rodadas",
+                "status": "Confirmado no jogo",
+                "description": "No começo da partida, atirar repetidamente no Shadowman enquanto ele observa o grupo pode avançar a partida para rodadas superiores e conceder alguns pontos."
+            },
+            {
+                "title": "Margwa Head",
+                "status": "Confirmado no jogo",
+                "description": "Destruir alvos relacionados ao Margwa durante trajetos específicos do bonde permite obter uma cabeça de Margwa utilizável pelo personagem."
+            },
+            {
+                "title": "Upgraded Lil' Arnie",
+                "status": "Confirmado no jogo",
+                "description": "Depois de conseguir eliminações com Lil' Arnies, o jogador deve lançá-los perto de objetos ligados aos quatro personagens e finalizar a sequência no palco do Black Lace Burlesque."
+            },
+            {
+                "title": "Escudo aprimorado",
+                "status": "Confirmado no jogo",
+                "description": "O Rocket Shield pode receber uma melhoria após realizar repetidamente grandes grupos de eliminações com sua investida."
+            },
+            {
+                "title": "Trip Mines transformadas",
+                "status": "Confirmado no jogo",
+                "description": "As Trip Mines podem ser usadas próximas aos carrinhos de sobremesa espalhados pela cidade, produzindo uma versão temática conhecida pela comunidade como Cream Cake Trip Mines."
+            },
+            {
+                "title": "Cifras e papéis escondidos",
+                "status": "Confirmado no jogo",
+                "description": "Diversas cifras, recortes e mensagens estão espalhados por Morg City. Parte desses registros amplia a história da cidade, dos Keepers, do Grupo 935 e da guerra contra os Apothicons."
+            },
+            {
+                "title": "Símbolos Apothicon",
+                "status": "Confirmado no jogo",
+                "description": "Símbolos observados durante a viagem de bonde formam uma linguagem visual usada para abrir o compartimento da Apothicon Sword."
+            },
+            {
+                "title": "Paralelos com purgatório",
+                "status": "Interpretação narrativa",
+                "description": "A estrutura de quatro criminosos submetidos a punição sobrenatural lembra Mob of the Dead. Essa associação é reforçada pelas referências a Sal DeLuca, mas nem todas as interpretações sobre Morg City funcionar literalmente como purgatório foram confirmadas pela Treyarch."
+            },
+            {
+                "title": "Mistérios ainda discutidos",
+                "status": "Teoria da comunidade",
+                "description": "A quantidade de símbolos, códigos e elementos ambientais fez Shadows of Evil permanecer como alvo de investigações por muitos anos. Teorias comunitárias devem ser apresentadas separadamente de informações comprovadas no jogo ou confirmadas pelos desenvolvedores."
+            }
+        ],
+
+        "mainQuest": {
+            "title": "Apocalypse Averted",
+            "warning": "Grande parte da missão pode ser realizada com menos jogadores, mas a conclusão completa, o Gateworm final e a cena de encerramento exigem quatro jogadores presentes na partida.",
+
+            "steps": [
+                {
+                    "number": 1,
+                    "title": "Obter a Summoning Key",
+                    "description": "Entre no Beast Mode em Easy Street, quebre a caixa localizada no caminhão e recolha a Summoning Key na forma humana."
+                },
+                {
+                    "number": 2,
+                    "title": "Encontrar os quatro objetos de ritual",
+                    "description": "Utilize Beast Mode para obter a Golden Fountain Pen, o Hair Piece, o Detective's Badge e o Championship Belt."
+                },
+                {
+                    "number": 3,
+                    "title": "Realizar os quatro rituais",
+                    "description": "Leve cada objeto ao local correspondente, coloque a Summoning Key no altar e sobreviva até o ritual terminar. Cada ritual concede uma Gateworm."
+                },
+                {
+                    "number": 4,
+                    "title": "Abrir o Sacred Place",
+                    "description": "Acesse a área subterrânea, coloque as quatro Gateworms nos altares e complete o ritual central para liberar o Pack-a-Punch."
+                },
+                {
+                    "number": 5,
+                    "title": "Identificar os símbolos do bonde",
+                    "description": "Viaje entre os distritos e observe os três símbolos necessários. No subterrâneo, entre em Beast Mode e eletrifique os símbolos corretos."
+                },
+                {
+                    "number": 6,
+                    "title": "Obter a Apothicon Sword",
+                    "description": "Pegue o ovo revelado, coloque-o nas quatro estátuas Apothicon e obtenha eliminações próximas até carregá-lo completamente. Depois, devolva-o ao pedestal."
+                },
+                {
+                    "number": 7,
+                    "title": "Aprimorar as espadas",
+                    "description": "Receba o Arch-Ovum do Keeper ligado ao seu personagem. Complete os desafios dos círculos de ritual, derrote os Margwas e devolva o item ao Keeper."
+                },
+                {
+                    "number": 8,
+                    "title": "Ativar o livro de Nero",
+                    "description": "Depois que as espadas necessárias estiverem aprimoradas, interaja com o livro encontrado no local do ritual de Nero."
+                },
+                {
+                    "number": 9,
+                    "title": "Proteger a bandeira",
+                    "description": "Recolha a bandeira no subterrâneo, coloque-a nos pontos energizados de cada distrito e proteja-a dos Meatballs, Parasites e ataques do Shadowman."
+                },
+                {
+                    "number": 10,
+                    "title": "Libertar os quatro Keepers",
+                    "description": "Após defender os dois pontos de um distrito, leve a bandeira até o altar de ritual correspondente. Repita o processo para os quatro distritos."
+                },
+                {
+                    "number": 11,
+                    "title": "Enfrentar o Shadowman",
+                    "description": "No Sacred Place, coloque as espadas nos pedestais e ative os Keepers. Quando o escudo do Shadowman desaparecer, ataque-o até aproximá-lo da Summoning Key e aprisioná-lo."
+                },
+                {
+                    "number": 12,
+                    "title": "Ativar a etapa final",
+                    "description": "Com quatro jogadores, mate Margwas próximos aos altares para liberar Beast Mode prolongado. Três jogadores devem eletrificar as caixas das estações enquanto outro chama o bonde."
+                },
+                {
+                    "number": 13,
+                    "title": "Destruir a Gateworm",
+                    "description": "Quando os trilhos estiverem energizados, o bonde atravessará o cruzamento e atingirá a Gateworm gigante."
+                },
+                {
+                    "number": 14,
+                    "title": "Eletrificar os Keepers",
+                    "description": "Após a Gateworm ser atingida, eletrifique os três Keepers no centro do mapa para concluir Apocalypse Averted e iniciar a cena final."
+                }
+            ]
+        },
+
+        "sources": [
+            {
+                "title": "Activision — anúncio oficial de Shadows of Evil",
+                "type": "Fonte oficial",
+                "url": "https://investor.activision.com/news-releases/news-release-details/activision-unveils-epic-call-duty-black-ops-iii-zombies-shadows",
+                "description": "Confirma o cenário noir, os arquétipos, o elenco e a proposta narrativa."
+            },
+            {
+                "title": "PlayStation Blog — entrevista com Jason Blundell",
+                "type": "Entrevista oficial",
+                "url": "https://blog.playstation.com/2018/07/20/treyarch-answers-some-of-your-call-of-duty-black-ops-4-zombies-questions/",
+                "description": "Explica como Shadows of Evil desafiou expectativas de período, tom, escala e variedade ambiental."
+            },
+            {
+                "title": "Apple Music — Snakeskin Boots",
+                "type": "Catálogo oficial de música",
+                "url": "https://music.apple.com/br/song/1542783541",
+                "description": "Confirma Jack Wall, o álbum oficial e a data de lançamento."
+            },
+            {
+                "title": "Apple Music — Cold Hard Cash",
+                "type": "Catálogo oficial de música",
+                "url": "https://music.apple.com/br/song/1542783540",
+                "description": "Confirma Jack Wall e a participação de Antonia Bennett."
+            },
+            {
+                "title": "COD Zombie Guides — Shadows of Evil",
+                "type": "Guia comunitário",
+                "url": "https://www.codzombieguides.com/shadows-of-evil",
+                "description": "Utilizado para verificar músicas secretas, itens escondidos e mecânicas secundárias."
+            },
+            {
+                "title": "Steam Community — Shadows of Evil Guide",
+                "type": "Guia comunitário",
+                "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=550319350",
+                "description": "Referência complementar para etapas da missão, espadas, bandeiras e segredos."
+            },
+            {
+                "title": "Zombies Codex — Shadows of Evil",
+                "type": "Guia comunitário",
+                "url": "https://www.zombiescodex.com/black-ops-3/shadows-of-evil/",
+                "description": "Referência complementar para organização e conferência das etapas da missão principal."
+            }
+        ]
+    }
+}

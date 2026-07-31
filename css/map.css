@@ -1,0 +1,855 @@
+/* =========================
+   VARIÁVEIS DA PÁGINA
+========================= */
+
+:root {
+    --map-primary: #b988e2;
+    --map-primary-light: #dcb7ff;
+    --map-primary-dark: #281536;
+
+    --map-background: #08050d;
+    --map-surface: #15101c;
+    --map-surface-light: #201729;
+
+    --map-glow: rgba(185, 136, 226, 0.32);
+}
+
+
+/* =========================
+   CONFIGURAÇÃO GERAL
+========================= */
+
+body.map-page {
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            var(--map-glow),
+            transparent 32%
+        ),
+        var(--map-background);
+
+    color: var(--text);
+}
+
+.map-page .logo,
+.map-page .section-label {
+    color: var(--map-primary);
+}
+
+.map-page .button-primary {
+    background: var(--map-primary);
+    color: #09070b;
+}
+
+.map-page .button-primary:hover {
+    background: var(--map-primary-light);
+}
+
+.map-page .button-secondary:hover {
+    border-color: var(--map-primary);
+    background: var(--map-glow);
+}
+
+
+/* =========================
+   APRESENTAÇÃO DO MAPA
+========================= */
+
+.map-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 130px 6% 80px;
+
+    background-color: var(--map-background);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.map-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 4, 8, 0.98) 0%,
+            rgba(5, 4, 8, 0.90) 28%,
+            rgba(5, 4, 8, 0.62) 52%,
+            rgba(5, 4, 8, 0.20) 100%
+        ),
+        linear-gradient(
+            0deg,
+            var(--map-background) 0%,
+            rgba(8, 5, 13, 0.55) 28%,
+            transparent 65%
+        );
+}
+
+.map-hero-content {
+    width: min(100%, 760px);
+}
+
+.map-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin-bottom: 2.5rem;
+
+    color: var(--text-muted);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.map-back-link:hover {
+    color: var(--map-primary-light);
+    transform: translateX(-4px);
+}
+
+.map-file {
+    margin-bottom: 0.8rem;
+
+    color: var(--map-primary-light);
+
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.map-hero h1 {
+    max-width: 850px;
+
+    font-size: clamp(3.3rem, 8vw, 7.2rem);
+    line-height: 0.9;
+
+    letter-spacing: -0.24rem;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.95),
+        0 0 45px var(--map-glow);
+}
+
+.map-location {
+    margin-top: 1.7rem;
+
+    color: var(--map-primary);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+}
+
+.map-introduction {
+    max-width: 720px;
+
+    margin-top: 1.4rem;
+
+    color: #c6c2ca;
+    font-size: 1.05rem;
+
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.95);
+}
+
+.map-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-top: 2.4rem;
+}
+
+
+/* =========================
+   SEÇÕES DO DOSSIÊ
+========================= */
+
+.map-section {
+    width: min(100% - 3rem, var(--container-width));
+
+    margin: 0 auto;
+    padding: 7rem 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.map-section-heading {
+    max-width: 850px;
+
+    margin-bottom: 3rem;
+}
+
+.map-section-heading h2 {
+    margin-bottom: 1.2rem;
+
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 1;
+
+    letter-spacing: -0.08rem;
+    text-transform: uppercase;
+}
+
+.map-section-description {
+    max-width: 740px;
+
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+
+/* =========================
+   VISÃO GERAL
+========================= */
+
+.map-overview-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 1rem;
+}
+
+.map-overview-card {
+    min-height: 130px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 1.4rem;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            transparent
+        ),
+        var(--map-surface);
+
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--map-primary);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.map-overview-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--map-primary);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.32);
+}
+
+.map-overview-label {
+    color: var(--text-muted);
+
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+}
+
+.map-overview-value {
+    margin-top: 1rem;
+
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+/* =========================
+   HISTÓRIA E DESENVOLVIMENTO
+========================= */
+
+.map-text-content {
+    max-width: 880px;
+}
+
+.map-text-content p {
+    margin-bottom: 1.4rem;
+
+    color: #c4c0c8;
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.map-text-content p:first-child::first-letter {
+    float: left;
+
+    margin-top: 0.12rem;
+    margin-right: 0.55rem;
+
+    color: var(--map-primary);
+
+    font-size: 3.7rem;
+    font-weight: 900;
+    line-height: 0.85;
+}
+
+
+/* =========================
+   PERSONAGENS
+========================= */
+
+.map-character-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(330px, 1fr));
+
+    gap: 1.5rem;
+}
+
+.map-character-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 1.8rem;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            transparent 50%
+        ),
+        var(--map-surface);
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.map-character-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: var(--map-primary);
+}
+
+.map-character-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--map-primary);
+
+    box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.35);
+}
+
+.map-character-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.map-character-name {
+    font-size: 1.45rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.map-character-archetype {
+    flex-shrink: 0;
+
+    padding: 0.4rem 0.55rem;
+
+    background: var(--map-glow);
+    border: 1px solid var(--map-primary);
+
+    color: var(--map-primary-light);
+
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+.map-card-detail {
+    margin-top: 0.9rem;
+
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+.map-card-detail strong {
+    color: var(--text);
+}
+
+
+/* =========================
+   MECÂNICAS
+========================= */
+
+.map-mechanics-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 1.2rem;
+}
+
+.map-mechanic-card {
+    min-height: 210px;
+
+    padding: 1.6rem;
+
+    background: var(--map-surface);
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.map-mechanic-card:hover {
+    transform: translateY(-5px);
+
+    background: var(--map-surface-light);
+    border-color: var(--map-primary);
+}
+
+.map-mechanic-card h3 {
+    margin-bottom: 1rem;
+
+    color: var(--map-primary-light);
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.map-mechanic-card p {
+    color: var(--text-muted);
+    line-height: 1.75;
+}
+
+
+/* =========================
+   MÚSICAS
+========================= */
+
+.map-soundtrack-list {
+    display: grid;
+    gap: 1.3rem;
+}
+
+.map-soundtrack-card {
+    padding: 1.7rem;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--map-glow),
+            transparent 45%
+        ),
+        var(--map-surface);
+
+    border: 1px solid var(--border);
+}
+
+.map-soundtrack-heading,
+.map-secret-heading,
+.map-source-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+}
+
+.map-soundtrack-heading h3,
+.map-secret-heading h3,
+.map-source-heading h3 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   CONEXÕES
+========================= */
+
+.map-connections-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 1.2rem;
+}
+
+.map-connection-card {
+    padding: 1.6rem;
+
+    background: var(--map-surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--map-primary);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.map-connection-card:hover {
+    transform: translateX(6px);
+    border-color: var(--map-primary);
+}
+
+.map-connection-card h3 {
+    margin-bottom: 0.9rem;
+
+    color: var(--map-primary-light);
+    text-transform: uppercase;
+}
+
+.map-connection-card p {
+    color: var(--text-muted);
+    line-height: 1.75;
+}
+
+
+/* =========================
+   SEGREDOS E MISTÉRIOS
+========================= */
+
+.map-secrets-list {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.map-secret-card {
+    padding: 1.6rem;
+
+    background: var(--map-surface);
+    border: 1px solid var(--border);
+}
+
+.map-secret-card p {
+    color: var(--text-muted);
+    line-height: 1.75;
+}
+
+.map-content-status {
+    flex-shrink: 0;
+
+    padding: 0.4rem 0.6rem;
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+
+    color: var(--text-muted);
+
+    font-size: 0.64rem;
+    font-weight: 800;
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
+}
+
+.status-confirmed {
+    color: #91d6a5;
+    border-color: rgba(92, 190, 120, 0.6);
+    background: rgba(92, 190, 120, 0.1);
+}
+
+.status-interpretation {
+    color: #e6bd70;
+    border-color: rgba(224, 165, 72, 0.6);
+    background: rgba(224, 165, 72, 0.1);
+}
+
+.status-theory {
+    color: #d2a4f6;
+    border-color: rgba(185, 136, 226, 0.6);
+    background: rgba(185, 136, 226, 0.1);
+}
+
+
+/* =========================
+   MISSÃO PRINCIPAL
+========================= */
+
+#map-quest-warning {
+    padding: 1.2rem 1.4rem;
+
+    background: rgba(242, 106, 33, 0.08);
+    border: 1px solid rgba(242, 106, 33, 0.4);
+    border-left: 4px solid var(--primary);
+
+    color: #d7c9bd;
+}
+
+.map-quest-steps {
+    display: grid;
+    gap: 1rem;
+}
+
+.map-quest-step {
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 1.4rem;
+
+    padding: 1.5rem;
+
+    background: var(--map-surface);
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.map-quest-step:hover {
+    transform: translateX(6px);
+    border-color: var(--map-primary);
+}
+
+.map-quest-number {
+    width: 62px;
+    height: 62px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--map-primary-dark);
+    border: 1px solid var(--map-primary);
+
+    color: var(--map-primary-light);
+
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.map-quest-content h3 {
+    margin-bottom: 0.65rem;
+
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+.map-quest-content p {
+    color: var(--text-muted);
+    line-height: 1.75;
+}
+
+
+/* =========================
+   FONTES
+========================= */
+
+.map-sources-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.map-source-card {
+    padding: 1.5rem;
+
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--border);
+}
+
+.map-source-card p {
+    margin-bottom: 1rem;
+
+    color: var(--text-muted);
+}
+
+.map-source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    color: var(--map-primary-light);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.map-source-link:hover {
+    color: var(--text);
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   MENSAGEM DE ERRO
+========================= */
+
+.map-error {
+    width: min(100% - 3rem, 760px);
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.4rem;
+
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.map-error[hidden] {
+    display: none;
+}
+
+.map-error h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    text-transform: uppercase;
+}
+
+.map-error p {
+    color: var(--text-muted);
+}
+
+
+/* =========================
+   FOCO E ACESSIBILIDADE
+========================= */
+
+.map-page a:focus-visible {
+    outline: 2px solid var(--map-primary-light);
+    outline-offset: 4px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 760px) {
+    .map-hero {
+        min-height: 92vh;
+
+        align-items: flex-end;
+
+        padding:
+            190px
+            6%
+            70px;
+
+        background-position: 58% center;
+    }
+
+    .map-hero-overlay {
+        background:
+            linear-gradient(
+                0deg,
+                var(--map-background) 0%,
+                rgba(8, 5, 13, 0.78) 55%,
+                rgba(8, 5, 13, 0.38) 100%
+            );
+    }
+
+    .map-hero h1 {
+        font-size: clamp(3rem, 16vw, 5rem);
+        letter-spacing: -0.12rem;
+    }
+
+    .map-introduction {
+        font-size: 0.98rem;
+    }
+
+    .map-hero-actions {
+        flex-direction: column;
+    }
+
+    .map-section {
+        width: min(100% - 2rem, var(--container-width));
+        padding: 5rem 0;
+    }
+
+    .map-character-grid,
+    .map-mechanics-grid,
+    .map-connections-list {
+        grid-template-columns: 1fr;
+    }
+
+    .map-character-heading,
+    .map-soundtrack-heading,
+    .map-secret-heading,
+    .map-source-heading {
+        flex-direction: column;
+    }
+
+    .map-quest-step {
+        grid-template-columns: 1fr;
+    }
+
+    .map-quest-number {
+        width: 54px;
+        height: 54px;
+    }
+}
+
+
+/* =========================
+   REDUÇÃO DE MOVIMENTO
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .map-overview-card,
+    .map-character-card,
+    .map-mechanic-card,
+    .map-connection-card,
+    .map-quest-step,
+    .map-back-link,
+    .map-source-link {
+        transition: none;
+    }
+
+    .map-overview-card:hover,
+    .map-character-card:hover,
+    .map-mechanic-card:hover,
+    .map-connection-card:hover,
+    .map-quest-step:hover,
+    .map-back-link:hover,
+    .map-source-link:hover {
+        transform: none;
+    }
+}
