@@ -1,0 +1,344 @@
+from pathlib import Path
+
+html = """<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Dossiê completo dos mapas de Call of Duty: Black Ops III Zombies."
+    >
+
+    <title>Dossiê do mapa | Aether Archives</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/interactions.css"><link rel="stylesheet" href="css/map.css">
+
+    
+'   <script src="js/map-details.js" defer></script>
+    <script
+    src="js/components/character-selector.js"
+    defer
+    ></script>
+</head>
+
+<body class="map-page">
+    <header class="header">
+        <a class="logo" href="index.html">
+            Aether Archives
+        </a>
+
+        <nav class="navigation" aria-label="Navegação principal">
+            <a href="index.html#inicio">Início</a>
+            <a href="index.html#mapas">Mapas</a>
+            <a href="index.html#personagens">Personagens</a>
+            <a href="index.html#cronologia">Cronologia</a>
+        </nav>
+    </header>
+
+    <main id="map-content">
+        <!-- Apresentação principal do mapa -->
+        <section class="map-hero" id="map-hero">
+            <div class="map-hero-overlay"></div>
+
+            <div class="map-hero-content">
+                <a class="map-back-link" href="index.html#mapas">
+                    ← Voltar aos mapas
+                </a>
+
+                <p class="map-file" id="map-file">
+                    Carregando arquivo...
+                </p>
+
+                <h1 id="map-title">
+                    Carregando mapa...
+                </h1>
+
+                <p class="map-location" id="map-location"></p>
+
+                <p
+                    class="map-introduction"
+                    id="map-introduction"
+                ></p>
+
+                <div class="map-hero-actions">
+                    <a
+                        class="button button-primary"
+                        href="#visao-geral"
+                    >
+                        Abrir dossiê
+                    </a>
+
+                    <a
+                        class="button button-secondary"
+                        href="#missao-principal"
+                    >
+                        Missão principal
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegação interna do dossiê -->
+        <nav class="map-index" aria-label="Seções do dossiê">
+            <div class="map-index-content">
+                <span class="map-index-title">
+                    Navegação do arquivo
+                </span>
+
+                <div class="map-index-links">
+                    <a href="#visao-geral">Visão geral</a>
+                    <a href="#historia">História</a>
+                    <a href="#criacao">Criação</a>
+                    <a href="#personagens-do-mapa">Personagens</a>
+                    <a href="#mecanicas">Mecânicas</a>
+                    <a href="#musica">Músicas</a>
+                    <a href="#conexoes">Conexões</a>
+                    <a href="#segredos">Segredos</a>
+                    <a href="#missao-principal">Missão principal</a>
+                    <a href="#fontes">Fontes</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Visão geral -->
+        <section class="map-section" id="visao-geral">
+            <div class="map-section-heading">
+                <p class="section-label">
+                    Informações do arquivo
+                </p>
+
+                <h2>Visão geral</h2>
+            </div>
+
+            <div
+                class="map-overview-grid"
+                id="map-overview"
+                aria-live="polite"
+            >
+                <p>Carregando informações...</p>
+            </div>
+        </section>
+
+        <!-- História -->
+        <section class="map-section" id="historia">
+            <div class="map-section-heading">
+                <p class="section-label">
+                    Registro narrativo
+                </p>
+
+                <h2>História</h2>
+            </div>
+
+            <div class="map-text-content" id="map-story">
+                <p>Carregando história...</p>
+            </div>
+        </section>
+
+        <!-- Proposta criativa -->
+        <section class="map-section" id="criacao">
+            <div class="map-section-heading">
+                <p class="section-label">
+                    Bastidores da Treyarch
+                </p>
+
+                <h2>Conceito e criação</h2>
+            </div>
+
+            <div class="map-text-content" id="map-development">
+                <p>
+                    Carregando informações de desenvolvimento...
+                </p>
+            </div>
+        </section>
+
+        <!-- Personagens -->
+        <section class="map-section" id="personagens-do-mapa">
+            <div class="map-section-heading">
+                <p class="section-label">
+                    Pessoas envolvidas
+                </p>
+
+                <h2>Personagens</h2>
+
+                <p class="map-section-description">
+                    História, personalidade, crimes, atores,
+                    arquétipos e possíveis inspirações.
+                </p>
+            </div>
+
+            <div class="map-character-grid" id="map-characters">
+                <p>Carregando personagens...</p>
+            </div>
+        </section>
+
+        <!-- Mecânicas -->
+        <section class="map-section" id="mecanicas">
+            <div class="map-section-heading">
+                <p class="section-label">
+                    Sistemas do mapa
+                </p>
+
+                <h2>Mecânicas</h2>
+            </div>
+
+            <div
+                class="map-mechanics-grid"
+                id="map-mechanics-list"
+            >
+                <p>Carregando mecânicas...</p>
+            </div>
+        </section>
+
+        <!-- Música -->
+        <section class="map-section" id="musica">
+            <div class="map-section-heading">
+                <p class="section-label">
+                    Arquivo sonoro
+                </p>
+
+                <h2>Músicas e trilha sonora</h2>
+
+                <p class="map-section-description">
+                    Canções secretas, temas instrumentais,
+                    compositores e relação da música com a
+                    atmosfera do mapa.
+                </p>
+            </div>
+
+            <div class="map-soundtrack-list" id="map-soundtrack">
+                <p>Carregando trilha sonora...</p>
+            </div>
+        </section>
+
+        <!-- Conexões -->
+        <section class="map-section" id="conexoes">
+            <div class="map-section-heading">
+                <p class="section-label">
+                    Universo Aether
+                </p>
+
+                <h2>Conexões com outros mapas</h2>
+            </div>
+
+            <div
+                class="map-connections-list"
+                id="map-connections"
+            >
+                <p>Carregando conexões...</p>
+            </div>
+        </section>
+
+        <!-- Segredos -->
+        <section class="map-section" id="segredos">
+            <div class="map-section-heading">
+                <p class="section-label">
+                    Registros ocultos
+                </p>
+
+                <h2>Segredos e mistérios</h2>
+
+                <p class="map-section-description">
+                    Easter eggs menores, mensagens escondidas,
+                    símbolos, rádios, documentos e teorias.
+                </p>
+            </div>
+
+            <div class="map-secrets-list" id="map-secrets">
+                <p>Carregando segredos...</p>
+            </div>
+        </section>
+
+        <!-- Missão principal -->
+        <section class="map-section" id="missao-principal">
+            <div class="map-section-heading">
+                <p class="section-label">
+                    Easter egg principal
+                </p>
+
+                <h2 id="map-main-quest">
+                    Missão principal
+                </h2>
+
+                <p
+                    class="map-section-description"
+                    id="map-quest-warning"
+                >
+                    Carregando requisitos...
+                </p>
+            </div>
+
+            <div class="map-quest-steps" id="map-quest-steps">
+                <p>Carregando etapas...</p>
+            </div>
+        </section>
+
+        <!-- Fontes -->
+        <section class="map-section" id="fontes">
+            <div class="map-section-heading">
+                <p class="section-label">
+                    Verificação do arquivo
+                </p>
+
+                <h2>Fontes da pesquisa</h2>
+
+                <p class="map-section-description">
+                    Referências utilizadas para diferenciar
+                    informações confirmadas, interpretações e
+                    teorias da comunidade.
+                </p>
+            </div>
+
+            <div class="map-sources-list" id="map-sources">
+                <p>Carregando fontes...</p>
+            </div>
+        </section>
+
+        <!-- Mensagem de erro -->
+        <section class="map-error" id="map-error" hidden>
+            <h1>Arquivo não encontrado</h1>
+
+            <p>
+                Não foi possível encontrar as informações deste mapa.
+            </p>
+
+            <a
+                class="button button-primary"
+                href="index.html#mapas"
+            >
+                Voltar aos mapas
+            </a>
+        </section>
+
+        <noscript>
+            <section class="map-error">
+                <h1>JavaScript desativado</h1>
+
+                <p>
+                    Ative o JavaScript do navegador para carregar
+                    o conteúdo do dossiê.
+                </p>
+            </section>
+        </noscript>
+    </main>
+
+    <footer class="footer">
+        <p>
+            Projeto não oficial criado para fins educacionais
+            e de portfólio.
+        </p>
+    </footer>
+</body>
+</html>
+"""
+
+path = Path("/mnt/data/mapa.html")
+path.write_text(html, encoding="utf-8")
+print(path)

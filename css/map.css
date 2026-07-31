@@ -180,6 +180,102 @@ body.map-page {
 
 
 /* =========================
+   NAVEGAÇÃO DO DOSSIÊ
+========================= */
+
+.map-index {
+    position: sticky;
+    top: 76px;
+    z-index: 100;
+
+    width: 100%;
+
+    background: rgba(8, 5, 13, 0.94);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(14px);
+}
+
+.map-index-content {
+    width: min(100% - 3rem, var(--container-width));
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.map-index-title {
+    flex-shrink: 0;
+
+    color: var(--map-primary-light);
+
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+}
+
+.map-index-links {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+
+    overflow-x: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color:
+        var(--map-primary-dark)
+        transparent;
+}
+
+.map-index-links a {
+    position: relative;
+    flex-shrink: 0;
+
+    padding: 0.35rem 0;
+
+    color: var(--text-muted);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.map-index-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--map-primary);
+
+    transition: width 0.3s ease;
+}
+
+.map-index-links a:hover {
+    color: var(--map-primary-light);
+    transform: translateY(-2px);
+}
+
+.map-index-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
    SEÇÕES DO DOSSIÊ
 ========================= */
 
@@ -190,6 +286,8 @@ body.map-page {
     padding: 7rem 0;
 
     border-bottom: 1px solid var(--border);
+
+    scroll-margin-top: 150px;
 }
 
 .map-section-heading {
@@ -763,6 +861,34 @@ body.map-page {
 ========================= */
 
 @media (max-width: 760px) {
+    .map-index {
+        top: 122px;
+    }
+
+    .map-index-content {
+        width: min(100% - 2rem, var(--container-width));
+
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.6rem;
+
+        padding: 0.8rem 0;
+    }
+
+    .map-index-links {
+        width: 100%;
+        gap: 1.1rem;
+
+        padding-bottom: 0.3rem;
+    }
+
+    .map-section {
+        width: min(100% - 2rem, var(--container-width));
+        padding: 5rem 0;
+
+        scroll-margin-top: 205px;
+    }
+
     .map-hero {
         min-height: 92vh;
 
@@ -797,11 +923,6 @@ body.map-page {
 
     .map-hero-actions {
         flex-direction: column;
-    }
-
-    .map-section {
-        width: min(100% - 2rem, var(--container-width));
-        padding: 5rem 0;
     }
 
     .map-character-grid,
