@@ -1,0 +1,380 @@
+/* =========================
+   PERSONAGENS INTERATIVOS
+========================= */
+
+.character-experience {
+    display: grid;
+    grid-template-columns: minmax(190px, 0.32fr) minmax(0, 1fr);
+    gap: 1.4rem;
+}
+
+.character-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.character-tab {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    align-items: center;
+    gap: 0.85rem;
+
+    padding: 1rem;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(185, 136, 226, 0.08),
+            transparent
+        ),
+        var(--map-surface);
+
+    border: 1px solid var(--border);
+
+    color: var(--text);
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.character-tab:hover {
+    transform: translateX(5px);
+    border-color: var(--map-primary);
+}
+
+.character-tab.is-active {
+    background:
+        linear-gradient(
+            90deg,
+            var(--map-glow),
+            transparent 80%
+        ),
+        var(--map-surface-light);
+
+    border-color: var(--map-primary);
+}
+
+.character-tab-number {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--border);
+
+    color: var(--map-primary-light);
+
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08rem;
+}
+
+.character-tab.is-active .character-tab-number {
+    background: var(--map-primary-dark);
+    border-color: var(--map-primary);
+}
+
+.character-tab-content {
+    min-width: 0;
+}
+
+.character-tab-name {
+    display: block;
+
+    overflow: hidden;
+
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.05rem;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.character-tab-archetype {
+    display: block;
+
+    margin-top: 0.25rem;
+
+    overflow: hidden;
+
+    color: var(--text-muted);
+
+    font-size: 0.65rem;
+    letter-spacing: 0.05rem;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   PAINEL DO PERSONAGEM
+========================= */
+
+.character-stage {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 590px;
+
+    background:
+        radial-gradient(
+            circle at 25% 40%,
+            var(--map-glow),
+            transparent 40%
+        ),
+        var(--map-surface);
+
+    border: 1px solid var(--border);
+}
+
+.character-panel {
+    position: absolute;
+    inset: 0;
+
+    display: grid;
+    grid-template-columns: minmax(260px, 0.75fr) minmax(300px, 1fr);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(18px);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease,
+        visibility 0.45s ease;
+}
+
+.character-panel.is-active {
+    position: relative;
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.character-visual {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 590px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(185, 136, 226, 0.22),
+            transparent 60%
+        ),
+        #09060e;
+
+    border-right: 1px solid var(--border);
+}
+
+.character-visual::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            0deg,
+            var(--map-surface) 0%,
+            transparent 40%
+        ),
+        linear-gradient(
+            90deg,
+            transparent 60%,
+            var(--map-surface) 100%
+        );
+
+    pointer-events: none;
+}
+
+.character-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    filter:
+        drop-shadow(0 30px 25px rgba(0, 0, 0, 0.75))
+        saturate(0.9);
+
+    transform: scale(1.02);
+
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.character-panel.is-active .character-image {
+    transform: scale(1.07);
+
+    filter:
+        drop-shadow(0 30px 25px rgba(0, 0, 0, 0.75))
+        saturate(1.05);
+}
+
+.character-visual.has-no-image .character-image {
+    display: none;
+}
+
+.character-fallback {
+    position: absolute;
+    inset: 0;
+
+    display: none;
+    place-items: center;
+
+    color: rgba(255, 255, 255, 0.08);
+
+    font-size: clamp(5rem, 14vw, 10rem);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.character-visual.has-no-image .character-fallback {
+    display: grid;
+}
+
+
+/* =========================
+   DOSSIÊ DO PERSONAGEM
+========================= */
+
+.character-information {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: clamp(2rem, 5vw, 4rem);
+}
+
+.character-information::before {
+    content: "ARQUIVO DE PERSONAGEM";
+
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color: var(--map-primary);
+
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.16rem;
+}
+
+.character-information .map-character-card {
+    padding: 0;
+
+    background: transparent;
+    border: 0;
+}
+
+.character-information .map-character-card::before {
+    display: none;
+}
+
+.character-information .map-character-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.character-information .map-character-heading {
+    padding-bottom: 1.5rem;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.character-information .map-character-name {
+    font-size: clamp(2rem, 4vw, 3.8rem);
+}
+
+.character-information .map-card-detail {
+    padding-bottom: 0.8rem;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+    .character-experience {
+        grid-template-columns: 1fr;
+    }
+
+    .character-tabs {
+        flex-direction: row;
+        overflow-x: auto;
+
+        padding-bottom: 0.5rem;
+    }
+
+    .character-tab {
+        min-width: 210px;
+    }
+
+    .character-tab:hover {
+        transform: translateY(-4px);
+    }
+}
+
+@media (max-width: 700px) {
+    .character-stage {
+        min-height: auto;
+    }
+
+    .character-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .character-visual {
+        min-height: 430px;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .character-visual::after {
+        background:
+            linear-gradient(
+                0deg,
+                var(--map-surface) 0%,
+                transparent 50%
+            );
+    }
+
+    .character-information {
+        padding: 2rem 1.4rem;
+    }
+
+    .character-information .map-character-heading {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .character-tab,
+    .character-panel,
+    .character-image {
+        transition: none;
+    }
+}

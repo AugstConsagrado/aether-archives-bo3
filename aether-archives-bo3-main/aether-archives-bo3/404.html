@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050608">
+    <meta name="color-scheme" content="dark">
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Arquivo não encontrado | Aether Archives</title>
+    <style>
+        .not-found {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 7rem 1.5rem 3rem;
+            background:
+                radial-gradient(circle at 70% 30%, rgba(242, 106, 33, 0.12), transparent 30%),
+                #050608;
+        }
+        .not-found-card {
+            width: min(100%, 760px);
+            padding: clamp(2rem, 6vw, 4.5rem);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-left: 3px solid var(--primary);
+            background: rgba(8, 10, 13, 0.86);
+        }
+        .not-found-code {
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 900;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+        }
+        .not-found h1 {
+            margin: 0.65rem 0 1rem;
+            font-size: clamp(3rem, 10vw, 7rem);
+            line-height: 0.9;
+            text-transform: uppercase;
+        }
+        .not-found p {
+            max-width: 580px;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <main class="not-found">
+        <section class="not-found-card" aria-labelledby="not-found-title">
+            <p class="not-found-code">Erro de arquivo — 404</p>
+            <h1 id="not-found-title">Registro não encontrado</h1>
+            <p>O dossiê solicitado não existe, foi movido ou ainda não está disponível nesta rede.</p>
+            <a class="button button-primary" href="index.html">Voltar ao arquivo principal</a>
+        </section>
+    </main>
+</body>
+</html>

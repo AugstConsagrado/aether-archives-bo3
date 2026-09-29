@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050608">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <meta
+        name="description"
+        content="Aether Archives: um arquivo não oficial e interativo dedicado ao universo de Call of Duty Black Ops III Zombies."
+    >
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aether Archives | Geheimakte 115">
+    <meta property="og:description" content="Arquivo interativo não oficial dedicado ao universo de Call of Duty: Black Ops III Zombies.">
+    <meta property="og:image" content="assets/images/hero-home-bo3.webp">
+    <title>Aether Archives | Geheimakte 115</title>
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body class="home-page">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <header class="header home-header" id="site-header">
+        <span class="header-scroll-progress" id="header-scroll-progress" aria-hidden="true"></span>
+        <a class="logo" href="#inicio" aria-label="Voltar ao início">
+            <span class="logo-mark" aria-hidden="true">A</span>
+            <span>Aether Archives</span>
+        </a>
+
+        <div class="header-system" aria-label="Estado do sistema">
+            <span class="status-light" aria-hidden="true"></span>
+            <span>Sistema online</span>
+            <span class="header-system-code">115</span>
+        </div>
+
+        <button class="navigation-toggle" id="navigation-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="navigation" id="main-navigation" aria-label="Navegação principal">
+            <a href="#inicio">Início</a>
+            <a href="#mapas">Mapas</a>
+            <a href="#personagens">Personagens</a>
+            <a href="#cronologia">Linha do Aether</a>
+        </nav>
+    </header>
+
+    <main class="home-main" id="main-content">
+        <section class="hero home-hero" id="inicio">
+            <div class="hero-scene" aria-hidden="true">
+                <img
+                    class="hero-scene-image"
+                    src="assets/images/hero-home-bo3.webp"
+                    alt=""
+                    width="1920"
+                    height="1080"
+                    fetchpriority="high"
+                    decoding="async"
+                >
+                <div class="hero-scene-depth"></div>
+                <div class="hero-scene-scan"></div>
+            </div>
+
+            <span class="home-network-node hero-network-node" aria-hidden="true"></span>
+
+            <div class="hero-content">
+                <p class="hero-file">Geheimakte <span>115</span></p>
+
+                <h1 class="hero-title" aria-label="Aether Archives">
+                    <span class="title-line"><b>A</b>ether</span>
+                    <span class="title-line"><b>A</b>rchives</span>
+                </h1>
+
+                <p class="hero-description">
+                    Um arquivo interativo dedicado aos mapas, personagens,
+                    armas, rituais e conexões de Black Ops III Zombies.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#mapas">
+                        Explorar arquivos
+                    </a>
+                    <button class="button button-secondary" id="random-file-button" type="button">
+                        Abrir arquivo aleatório
+                    </button>
+                </div>
+
+                <div class="hero-system-status" aria-label="Progresso dos arquivos">
+                    <span class="status-light" aria-hidden="true"></span>
+                    <span>Sistema online</span>
+                    <span class="status-divider" aria-hidden="true"></span>
+                    <span id="home-progress-label">0 de 6 arquivos investigados</span>
+                </div>
+
+                <div class="hero-archive-strip" aria-label="Dados do arquivo">
+                    <span><strong>06</strong> mapas catalogados</span>
+                    <span><strong>115</strong> classificação Aether</span>
+                    <span><strong>BO3</strong> projeto não oficial</span>
+                </div>
+            </div>
+
+            <aside class="hero-file-index" aria-label="Estrutura do arquivo">
+                <span class="hero-index-label">Rede ativa</span>
+                <ol>
+                    <li><b>01</b> Mapas</li>
+                    <li><b>02</b> Pessoas</li>
+                    <li><b>03</b> Linha do Aether</li>
+                </ol>
+            </aside>
+
+            <a class="hero-scroll-cue" href="#mapas">
+                <span>Entrar na rede</span>
+                <i aria-hidden="true"></i>
+            </a>
+        </section>
+
+        <div class="home-transition" aria-hidden="true">
+            <span></span>
+            <i></i>
+            <strong>Arquivo principal</strong>
+        </div>
+
+        <section class="home-section maps-showcase reveal" id="mapas">
+            <span class="home-network-node" aria-hidden="true"></span>
+
+            <header class="home-section-heading">
+                <div>
+                    <p class="section-label">Arquivos disponíveis</p>
+                    <h2>Mapas</h2>
+                </div>
+                <p>
+                    Gire a vitrine para percorrer a jornada. Cada arquivo mantém
+                    seu próprio progresso, mecânica e identidade visual.
+                </p>
+            </header>
+
+            <div class="map-vault" data-map-vault>
+                <div class="map-vault-toolbar">
+                    <span class="map-vault-counter" id="map-vault-counter">01 / 06</span>
+                    <div class="map-vault-controls" aria-label="Controles da vitrine">
+                        <button type="button" data-map-previous aria-label="Mapa anterior">←</button>
+                        <button type="button" data-map-next aria-label="Próximo mapa">→</button>
+                    </div>
+                </div>
+
+                <div
+                    class="map-carousel"
+                    id="map-carousel"
+                    tabindex="0"
+                    aria-label="Vitrine rotativa dos mapas"
+                >
+                    <div class="map-carousel-track">
+                        <article
+                            class="map-vault-card"
+                            data-map-slide
+                            data-map-id="shadows-of-evil"
+                            data-title="Shadows of Evil"
+                            data-file="Arquivo 01"
+                            data-place="Morg City"
+                            data-summary="Quatro habitantes são conduzidos por rituais, Beast Mode e pela presença do Shadowman."
+                            data-tags="Beast Mode|Rituais|Apothicons"
+                            data-image="assets/images/maps/shadows-of-evil-canal.webp"
+                            data-href="mapa.html?id=shadows-of-evil"
+                        >
+                            <img loading="lazy" decoding="async" src="assets/images/maps/shadows-of-evil-canal.webp" alt="Morg City em Shadows of Evil">
+                            <span class="map-vault-file">Arquivo 01</span>
+                            <span class="map-vault-code">SOE</span>
+                            <div>
+                                <small>Morg City</small>
+                                <h3>Shadows of Evil</h3>
+                            </div>
+                        </article>
+
+                        <article
+                            class="map-vault-card"
+                            data-map-slide
+                            data-map-id="the-giant"
+                            data-title="The Giant"
+                            data-file="Arquivo 02"
+                            data-place="Instalação do Grupo 935"
+                            data-summary="Primis altera um momento decisivo e reativa a rede de teletransportadores da instalação."
+                            data-tags="Grupo 935|Teleporte|Primis"
+                            data-image="assets/images/maps/the-giant.jpg"
+                            data-href="mapa.html?id=the-giant"
+                        >
+                            <img loading="lazy" decoding="async" src="assets/images/maps/the-giant.jpg" alt="Instalação de The Giant">
+                            <span class="map-vault-file">Arquivo 02</span>
+                            <span class="map-vault-code">935</span>
+                            <div>
+                                <small>Grupo 935</small>
+                                <h3>The Giant</h3>
+                            </div>
+                        </article>
+
+                        <article
+                            class="map-vault-card"
+                            data-map-slide
+                            data-map-id="der-eisendrache"
+                            data-title="Der Eisendrache"
+                            data-file="Arquivo 03"
+                            data-place="Áustria"
+                            data-summary="O castelo concentra experimentos, dragões e os quatro caminhos elementais do Wrath of the Ancients."
+                            data-tags="Arcos|Dragões|Castelo"
+                            data-image="assets/images/maps/der-eisendrache.jpg"
+                            data-href="mapa.html?id=der-eisendrache"
+                        >
+                            <img loading="lazy" decoding="async" src="assets/images/maps/der-eisendrache.jpg" alt="Castelo de Der Eisendrache">
+                            <span class="map-vault-file">Arquivo 03</span>
+                            <span class="map-vault-code">DE</span>
+                            <div>
+                                <small>Áustria</small>
+                                <h3>Der Eisendrache</h3>
+                            </div>
+                        </article>
+
+                        <article
+                            class="map-vault-card"
+                            data-map-slide
+                            data-map-id="zetsubou-no-shima"
+                            data-title="Zetsubou No Shima"
+                            data-file="Arquivo 04"
+                            data-place="Ilha do Pacífico"
+                            data-summary="A Divisão 9 transformou a ilha em um laboratório de plantas, esporos e mutações."
+                            data-tags="Divisão 9|Plantas|KT-4"
+                            data-image="assets/images/maps/zetsubou_no_shima.jpg"
+                            data-href="mapa.html?id=zetsubou-no-shima"
+                        >
+                            <img loading="lazy" decoding="async" src="assets/images/maps/zetsubou_no_shima.jpg" alt="Ilha de Zetsubou No Shima">
+                            <span class="map-vault-file">Arquivo 04</span>
+                            <span class="map-vault-code">ZNS</span>
+                            <div>
+                                <small>Divisão 9</small>
+                                <h3>Zetsubou No Shima</h3>
+                            </div>
+                        </article>
+
+                        <article
+                            class="map-vault-card"
+                            data-map-slide
+                            data-map-id="gorod-krovi"
+                            data-title="Gorod Krovi"
+                            data-file="Arquivo 05"
+                            data-place="Stalingrado"
+                            data-summary="Dragões, máquinas e ruínas de guerra transformam a cidade em uma operação de cerco."
+                            data-tags="Dragões|Sophia|Cerco"
+                            data-image="assets/images/maps/gorod_krovi.jpg"
+                            data-href="mapa.html?id=gorod-krovi"
+                        >
+                            <img loading="lazy" decoding="async" src="assets/images/maps/gorod_krovi.jpg" alt="Stalingrado em Gorod Krovi">
+                            <span class="map-vault-file">Arquivo 05</span>
+                            <span class="map-vault-code">GK</span>
+                            <div>
+                                <small>Stalingrado</small>
+                                <h3>Gorod Krovi</h3>
+                            </div>
+                        </article>
+
+                        <article
+                            class="map-vault-card"
+                            data-map-slide
+                            data-map-id="revelations"
+                            data-title="Revelations"
+                            data-file="Arquivo 06"
+                            data-place="Agartha"
+                            data-summary="Fragmentos da jornada se encontram em Agartha no encerramento do ciclo de Black Ops III."
+                            data-tags="Agartha|Fragmentos|Aether"
+                            data-image="assets/images/maps/revelations.jpg"
+                            data-href="mapa.html?id=revelations"
+                        >
+                            <img loading="lazy" decoding="async" src="assets/images/maps/revelations.jpg" alt="Agartha em Revelations">
+                            <span class="map-vault-file">Arquivo 06</span>
+                            <span class="map-vault-code">REV</span>
+                            <div>
+                                <small>Agartha</small>
+                                <h3>Revelations</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="map-record-shell">
+                    <article class="map-active-record" id="map-active-record" aria-live="polite"></article>
+                    <div class="map-vault-dots" id="map-vault-dots" aria-label="Selecionar mapa"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-section character-network-section reveal" id="personagens">
+            <span class="home-network-node" aria-hidden="true"></span>
+
+            <header class="home-section-heading">
+                <div>
+                    <p class="section-label">Pessoas envolvidas</p>
+                    <h2>Rede de Morg City</h2>
+                </div>
+                <p>
+                    Cada personagem está ligado a um distrito, um objeto e um
+                    local de ritual. Selecione um nome para seguir a conexão.
+                </p>
+            </header>
+
+            <div class="character-brain" id="character-brain" data-active-character="nero">
+                <div class="character-network-canvas">
+                    <svg class="character-connection-lines" viewBox="0 0 800 560" aria-hidden="true">
+                        <path class="line-nero" d="M400 280 C400 190 400 120 400 66"></path>
+                        <path class="line-jessica" d="M400 280 C300 250 180 210 86 176"></path>
+                        <path class="line-jack" d="M400 280 C500 250 620 210 714 176"></path>
+                        <path class="line-floyd" d="M400 280 C400 370 400 440 400 500"></path>
+                    </svg>
+
+                    <div class="character-crew-visual">
+                        <img
+                            loading="lazy" decoding="async" src="assets/images/shadows-of-evil/characters/morg-city-crew.webp"
+                            alt="Jessica Rose, Jack Vincent, Nero Blackstone e Floyd Campbell"
+                            width="637"
+                            height="358"
+                        >
+                        <span>Morg City · 1940</span>
+                    </div>
+
+                    <button class="character-node character-node-nero is-active" type="button" data-character="nero">
+                        <span>NB</span>
+                        <strong>Nero Blackstone</strong>
+                    </button>
+                    <button class="character-node character-node-jessica" type="button" data-character="jessica">
+                        <span>JR</span>
+                        <strong>Jessica Rose</strong>
+                    </button>
+                    <button class="character-node character-node-jack" type="button" data-character="jack">
+                        <span>JV</span>
+                        <strong>Jack Vincent</strong>
+                    </button>
+                    <button class="character-node character-node-floyd" type="button" data-character="floyd">
+                        <span>FC</span>
+                        <strong>Floyd Campbell</strong>
+                    </button>
+                </div>
+
+                <article class="character-network-record" id="character-network-record" aria-live="polite"></article>
+            </div>
+        </section>
+
+        <section class="home-section aether-path-section reveal" id="cronologia">
+            <span class="home-network-node" aria-hidden="true"></span>
+
+            <header class="home-section-heading">
+                <div>
+                    <p class="section-label">Conexões do ciclo</p>
+                    <h2>Linha do Aether</h2>
+                </div>
+                <p>
+                    Os arquivos não são páginas isoladas. Cada etapa abre a
+                    próxima ligação da jornada de Primis em Black Ops III.
+                </p>
+            </header>
+
+            <div class="aether-path" data-aether-path>
+                <div class="aether-path-track" role="tablist" aria-label="Etapas do ciclo">
+                    <button class="aether-path-node is-active" type="button" data-timeline-index="0">
+                        <span>01</span><strong>Morg City</strong>
+                    </button>
+                    <button class="aether-path-node" type="button" data-timeline-index="1">
+                        <span>02</span><strong>The Giant</strong>
+                    </button>
+                    <button class="aether-path-node" type="button" data-timeline-index="2">
+                        <span>03</span><strong>Castelo</strong>
+                    </button>
+                    <button class="aether-path-node" type="button" data-timeline-index="3">
+                        <span>04</span><strong>Ilha</strong>
+                    </button>
+                    <button class="aether-path-node" type="button" data-timeline-index="4">
+                        <span>05</span><strong>Stalingrado</strong>
+                    </button>
+                    <button class="aether-path-node" type="button" data-timeline-index="5">
+                        <span>06</span><strong>Agartha</strong>
+                    </button>
+                </div>
+
+                <article class="aether-path-record" id="timeline-detail" aria-live="polite"></article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer home-footer">
+        <span>Aether Archives · Geheimakte 115</span>
+        <p>Projeto não oficial criado para fins educacionais e de portfólio.</p>
+        <a class="footer-top-link" href="#inicio">Voltar ao topo ↑</a>
+    </footer>
+</body>
+</html>
