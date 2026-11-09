@@ -1,8 +1,8 @@
 # Aether Archives — Geheimakte 115
 
-Um arquivo interativo sobre o universo Zombies de **Call of Duty: Black Ops III**, criado por **Erick Augusto** como projeto pessoal de portfólio.
+Criei este arquivo interativo para reunir mapas, personagens, histórias e mecânicas do modo Zombies de **Call of Duty: Black Ops III** em uma experiência própria de exploração.
 
-A ideia nasceu do interesse pelo jogo: planejar e começar um site que reunisse mapas, personagens, histórias e mecânicas em uma experiência própria. O resultado combina uma apresentação cinematográfica com seis dossiês navegáveis e interações inspiradas em cada mapa.
+Neste projeto de portfólio, desenvolvi uma apresentação cinematográfica, seis dossiês navegáveis e interações inspiradas nas características de cada mapa. A proposta combina meu interesse pelo jogo com estudos de estruturação de conteúdo, interface e desenvolvimento front-end.
 
 [**Explorar o site**](https://augstconsagrado.github.io/aether-archives-bo3/) · [**Conhecer o estudo de UI/UX**](https://augstconsagrado.github.io/aether-archives-bo3/ui-ux.html) · [**Abrir a apresentação em PDF**](portfolio/Aether_Archives_UI_UX_Case_Study.pdf)
 
